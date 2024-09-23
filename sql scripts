@@ -8,6 +8,18 @@ GROUP BY
     Subscription_Type;
 
 
+-- How many users were in each country?
+	SELECT 
+	    Country, 
+	    COUNT(UserID) AS Total_Users
+	FROM 
+	    netflix_users nu 
+	GROUP BY 
+	    Country
+	ORDER BY 
+	    Total_Users DESC;
+
+
 -- How does revenue vary by country? Which countries contribute the most to Netflix’s revenue
 SELECT 
     Country, 
